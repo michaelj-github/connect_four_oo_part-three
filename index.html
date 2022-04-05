@@ -1,0 +1,38 @@
+<!doctype html>
+
+<head>
+  <title>Connect 4</title>
+  <link href="connect4.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <section id="theGameBoard">
+
+    <div id="game">
+      <table id="board"></table>
+    </div>
+
+    <div class="theFormDiv">
+
+      <form id="theForm">
+        <label for="player1"></label>
+        <p><input type="text" placeholder="Player 1 color" name="player1" value="" id="player1"></p>
+        <label for="player2"></label>
+        <p><input type="text" placeholder="Player 2 color" name="player2" value="" id="player2"></p>
+        <p><input type="submit" value="Start The Connect Four Game!" id="reStart"></p>
+      </form>
+
+    </div>
+
+    <div id="messages">
+      <p>Click the button to start.</p>
+    </div>
+
+  </section>
+
+  <script src="connect4.js"></script>
+
+</body>
+
+</html>

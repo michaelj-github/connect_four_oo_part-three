@@ -1,0 +1,92 @@
+/* game board table */
+body {
+  background-color: ivory;
+}
+
+#theGameBoard {
+position: absolute;
+top: 5%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%)
+/* This will center horzontally and vertically if left and top are 50%*/
+/* transform: translate(-50%, -50%) */
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+  background-color: white;
+}
+
+#theForm {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  animation-name: dropDown;
+  animation-duration: 1s;
+}
+
+.piece.p1 {
+  background-color: #FFD700;
+}
+
+.piece.p2 {
+  background-color: #0057B7;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: lightgray;
+}
+
+#button {
+  margin: 10px;
+}
+
+#messages {
+  margin: 20px;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.gameOver {
+animation-name: pulse;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {color: white;}
+  to {color: black;}
+}
+
+@keyframes dropDown {
+from {
+margin-top: -450px;
+}
+to {
+margin-bottom: 0px;
+}
+}
